@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendrier>
+    <projets>
+        <projet>
+            <nom>P1</nom>
+            <disponibilite>2015-06-12</disponibilite>
+            <echeance>2015-07-01</echeance>
+        </projet>
+        <projet>
+            <nom>P3</nom>
+            <disponibilite>2015-06-14</disponibilite>
+            <echeance>2015-07-10</echeance>
+        </projet>
+        <projet>
+            <nom>P4</nom>
+            <disponibilite>2015-06-14</disponibilite>
+            <echeance>2015-06-17</echeance>
+        </projet>
+    </projets>
+    <taches>
+        <tache>
+            <identificateur>T1</identificateur>
+            <titre>Tache 1</titre>
+            <disponibilite>2015-06-12</disponibilite>
+            <echeance>2015-06-30</echeance>
+            <projet>P1</projet>
+        </tache>
+        <tache preemptive="true">
+            <identificateur>T2</identificateur>
+            <titre>Tache 2</titre>
+            <disponibilite>2015-06-12</disponibilite>
+            <echeance>2015-06-29</echeance>
+            <projet>P1</projet>
+            <duree>840</duree>
+        </tache>
+        <tache>
+            <identificateur>T5</identificateur>
+            <titre>Tache 5</titre>
+            <disponibilite>2015-06-14</disponibilite>
+            <echeance>2015-07-10</echeance>
+            <projet>P3</projet>
+        </tache>
+        <tache>
+            <identificateur>T6</identificateur>
+            <titre>Tache 6</titre>
+            <disponibilite>2015-06-14</disponibilite>
+            <echeance>2015-07-10</echeance>
+            <projet>P3</projet>
+        </tache>
+        <tache preemptive="true">
+            <identificateur>T7</identificateur>
+            <titre>Tache 7</titre>
+            <disponibilite>2015-06-14</disponibilite>
+            <echeance>2015-07-10</echeance>
+            <projet>P3</projet>
+            <duree>120</duree>
+        </tache>
+    </taches>
+    <precedences/>
+    <sous-taches>
+        <sous-tache tache="T1">
+            <tache>T2</tache>
+        </sous-tache>
+        <sous-tache tache="T5">
+            <tache>T7</tache>
+        </sous-tache>
+    </sous-taches>
+    <programmations>
+        <programmation>
+            <tache>T2</tache>
+            <dateTime>2015-06-15T09:45:00</dateTime>
+            <duree>120</duree>
+        </programmation>
+        <programmation>
+            <evenement>
+                <nom>Activité 1</nom>
+                <type>TD</type>
+                <description>TD LO21</description>
+                <lieu>salle info</lieu>
+            </evenement>
+            <dateTime>2015-06-16T08:00:55</dateTime>
+            <duree>60</duree>
+        </programmation>
+        <programmation>
+            <evenement>
+                <nom>Activité 2</nom>
+                <type>Cours</type>
+                <description>Cours LO21</description>
+                <lieu>amphi</lieu>
+            </evenement>
+            <dateTime>2015-06-17T09:49:25</dateTime>
+            <duree>855</duree>
+        </programmation>
+        <programmation>
+            <tache>T7</tache>
+            <dateTime>2015-06-18T11:03:17</dateTime>
+            <duree>60</duree>
+        </programmation>
+        <programmation>
+            <evenement>
+                <nom>Activité 3</nom>
+                <type>soutenance</type>
+                <description>soutenance LO21</description>
+                <lieu>FA500</lieu>
+            </evenement>
+            <dateTime>2015-06-18T14:08:11</dateTime>
+            <duree>120</duree>
+        </programmation>
+    </programmations>
+</calendrier>
